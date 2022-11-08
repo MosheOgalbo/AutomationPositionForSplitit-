@@ -19,7 +19,7 @@ public class TestMain {
     }
     @AfterClass
     public void closeAllPages(){
-        driver.quit();
+        //driver.quit();
         // driver.close();
     }
     @Test
@@ -54,9 +54,8 @@ public class TestMain {
         WebStorage webStorage = (WebStorage) new Augmenter().augment(driver);
         LocalStorage localStorage = webStorage.getLocalStorage();
         TextRepository.encodedToken= localStorage.getItem("forterToken");
-        SessionId s = ((RemoteWebDriver) driver).getSessionId();
         System.out.println( TextRepository.encodedToken);
-        System.out.println(s);
+
 
     }
     @Test
