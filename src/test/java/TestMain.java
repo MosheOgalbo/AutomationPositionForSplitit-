@@ -19,7 +19,7 @@ public class TestMain {
     }
     @AfterClass
     public void closeAllPages(){
-        //driver.quit();
+        driver.quit();
         // driver.close();
     }
     @Test
